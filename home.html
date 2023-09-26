@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long COVID Trials</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="charts">
+            <div class="chart">
+                <canvas id="statusChart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="categoryChart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="countryChart"></canvas>
+            </div>
+        </div>
+        <div class="info-map">
+            <div class="trial-info">
+                <table>
+                    <!-- Table header -->
+                </table>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBytUqapcXYJoOLci9vyjivI4Ahs26GzME"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
