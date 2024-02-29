@@ -1,6 +1,7 @@
 /* Extract data from JSON */
 console.log('Loading data...')
-const data = fetch('http://127.0.0.1:5500/COVID_LC_Interv_Normalized_dregs_JSON.json').then((response) => response.json())
+//const data = fetch('http://127.0.0.1:5500/COVID_LC_Interv_Normalized_dregs_JSON.json').then((response) => response.json())
+const data = fetch('./COVID_LC_Interv_Normalized_dregs_JSON.json').then((response) => response.json());
 console.log(data);
 
 /* Top page pie charts */
@@ -72,3 +73,25 @@ new Chart(ctx3, {
         }
     }
 })
+
+/* Map with pins */
+let map;
+async function initMap() {
+    const position = { lat: -25.344, lng: 131.031 };
+
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+    map = new Map(document.getElementById("map"), {
+        zoom: 4,
+        center: position,
+        mapId: "DEMO_MAP_ID",
+    });
+
+    const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Uluru",
+    });
+}
+initMap();
