@@ -1,0 +1,55 @@
+This website design is a **dashboard-style interface** for tracking **Long Covid clinical trials**. Below is a structured breakdown to estimate web development costs:
+
+### **1. General Overview**
+- **Type**: Clinical trial monitoring dashboard
+- **Main Functionalities**:
+  - Data visualization (pie charts)
+  - Interactive data table
+  - Trial preview panel
+  - Download feature
+
+### **2. UI/UX Design**
+- **Header**:
+  - Title: "Long Covid Trials Dashboard"
+  - Privacy button (just a disclaimer, no settings)
+  - Last update date (dynamic content)
+
+- **Main Content**:
+  - **Total Number of Trials**: Displayed dynamically
+  - **Two Pie Charts**:
+    - One representing recruitment status (e.g., Authorized, Recruiting)
+    - Another showing trial types (e.g., Pharmacological, Rehabilitation)
+  - **Data Table**:
+    - Columns: Trial ID, Category, Country, Recruitment Status, Public Title
+    - Sortable and filterable rows
+    - Color coding for different trial statuses
+
+- **Side Panel**:
+  - Preview box (displays details when a trial is selected)
+  - Expandable/collapsible (indicated by a "+" button)
+
+- **Download Button**:
+  - Allows downloading trial data (CSV, Excel, or PDF)
+
+### **3. Technical Implementation Considerations**
+- **Frontend**:
+  - Likely built with **React, Vue, or Angular** for interactivity
+  - **D3.js or Chart.js** for pie charts
+  - **DataTables.js or AG Grid** for the trial table
+
+- **Backend**:
+  - Database (PostgreSQL, MySQL, or MongoDB) for trial data
+  - API (Node.js, Django, or Flask) for fetching/updating trial records
+  - Scheduled updates for the "Last update" field
+
+- **Hosting & Security**:
+  - No need for Secure handling of clinical data (GDPR/HIPAA compliance not needed public data)
+  - No user authentication
+  - Cloud hosting (AWS, Azure, or Google Cloud)
+  
+ The is NO user management, no admin access or whatever. The goal is only to view and access these consolidated public data. So no login and logout or whatever
+Also, based on your experience, how much money would you think it would be reasonable for a webdev to make a function v1 with the map and the clickable/previewable table?
+
+Factoring in french price (probably half of US rates),
+the dev being naturally favorable to the Long Covid cause (being either directly or indirectly impacted)
+and the money coming from poor patients pockets?
